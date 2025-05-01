@@ -83,7 +83,7 @@
         }
 
         + li {
-          margin-top: 0.2em;
+          margin-top: 1em;
         }
       }
 
@@ -197,10 +197,22 @@
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li>making scale bigger. tried to keep all bars similar heights </li>
-          <li>resample</li>
-          <li>cherry pick allegations</li>
-          <li>bright colors to avoid drawing attention to any one bar.</li>
+          <li>Making y-axis taller to make bars appear shorter. By increasing the y-axis to go up to 60%, I made all bars appear closer in height and visually minimized their differences. Since the actual differences 
+            ranged from 2-10%, by stretching the axis I reduced the perceptual weight of those gaps. By lessening the differences, I made the data seem more uniform and could support the argument of equality. Even though this is not full
+          deception, it introduces visual distortion and clouds perception. (Score: -1) </li>
+          <li>Resampled 2000 rows per race to equalize distribution. The original dataset was very skewed toward black complainants with significantly less rows for white and hispanic groups. To counter this, I sampled 2000 
+            entries from each group which created an artificially balanced dataset. This choice completely violates data integrity by throwing away real world proportions in favor of equal representation. Since this altered the 
+            data, it allowed me to generate a clean, symmetric visual for my argument. This was done intentionally as I was seeking to force the storyline, making this decision fully deceptive. (Score: -2)
+          </li>
+          <li>Cherry-picked most equal allegations to display. After resampling, I selectively chose only the allegations that showed nearly equal complaint rates across races. Prior, I chose allegations based on how common it was, 
+            but these were to intentionally force my story and omit the ones that did not support my message of equality. This decision was a strategic act to show data agreement with my story rather than present a fair representation 
+            of the data and guide the reader to a predetermined conclusion. While my data is not incorrect, it does not present the data holistically and is thus deceptive. (Score: -1.5)
+
+          <li>Used bright and soft colors to avoid highlighting any particular bar. To support the story of equality, I avoided bold/saturated colors like red. Instead, I used neutral and pastel colors for each race to 
+            avoid drawing disproportionate attention. I made this choice to highlight fairness and also to make sure readers do not tie race to any color scheme. While this my soften the impact of the message, it agrees with 
+            my story of racial equality.I did consider matching the color scheme from my first graph by using red to highlight black conplainants, I thought it would be better to be more colorful to signify equality. I believe that 
+            this design choice supports clarity but lacks something that grabs the eye. (Score: 0.5)
+          </li>
         </ul>
       </section>
 
