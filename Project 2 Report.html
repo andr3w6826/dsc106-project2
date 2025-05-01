@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project 2 Report</title>
+    <style>
+      :root {
+        --color-neutral-95: hsl(220 10% 95%);
+        --color-neutral-90: hsl(220 10% 90%);
+        --color-neutral-80: hsl(220 10% 80%);
+        --color-neutral-70: hsl(220 10% 70%);
+        --color-neutral-60: hsl(220 10% 60%);
+        --color-neutral-50: hsl(220 10% 50%);
+        --color-neutral-40: hsl(220 10% 40%);
+        --color-neutral-30: hsl(220 10% 30%);
+        --color-neutral-20: hsl(220 10% 20%);
+        --color-neutral-10: hsl(220 10% 10%);
+      }
+
+      html {
+        font: 100%/1.5 system-ui;
+        counter-reset: figure;
+        background: var(--color-neutral-95);
+        max-width: min(75vw, 80em);
+        margin: 0 auto;
+      }
+
+      /* Headings */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        line-height: 1.1;
+        font-weight: 600;
+        text-wrap: balance;
+      }
+
+      h1,
+      h2 {
+        border-bottom: 1px solid var(--color-neutral-80);
+        padding-bottom: 0.2em;
+      }
+
+      h1 {
+        margin-block: 1em 0.5rem;
+        font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+        font-weight: 800;
+
+        small {
+          display: block;
+          width: fit-content;
+          padding: 0.2em 0.5em;
+          margin-inline: auto;
+          color: white;
+          background: var(--color-neutral-40);
+          font-size: 40%;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+      }
+
+      h2 {
+        font-size: 180%;
+        color: var(--color-neutral-30);
+      }
+
+      h3 {
+        font-size: 130%;
+      }
+
+      /* Lists */
+
+      ul,
+      ol {
+        padding-inline-start: 2em;
+      }
+
+      li {
+        &::marker {
+          color: var(--color-neutral-40);
+        }
+
+        + li {
+          margin-top: 0.2em;
+        }
+      }
+
+      /* Sectioning elements */
+
+      header {
+        padding-block: 1em;
+        text-align: center;
+      }
+
+      main {
+        background: white;
+        color: var(--color-neutral-20);
+        border-radius: 1rem;
+        padding: 0.1rem 2rem;
+      }
+
+      /* Figures */
+
+      figure {
+        margin: 1em 0;
+        padding: 0.5rem;
+        margin-inline: -0.5em;
+        border: 1px solid var(--color-neutral-80);
+        box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+        text-align: center;
+        background: white;
+
+        > figcaption {
+          font: 500 75% var(--font-sans);
+          background: var(--color-neutral-95);
+          padding: 0.5rem;
+          margin: -0.5rem;
+          margin-top: 0.5rem;
+          counter-increment: figure;
+          text-align: left;
+
+          &::before {
+            content: 'Figure ' counter(figure) ': ';
+            font-weight: bold;
+            color: var(--color-neutral-40);
+          }
+
+          a:not(:hover, :focus, :active) {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-color: color-mix(
+              in lab,
+              currentColor,
+              transparent 70%
+            );
+          }
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <small>Project 2</small>
+        Persuasive or Deceptive Visualization?
+      </h1>
+
+      <p><strong>Andrew Chen</strong> — <em>anc062@ucsd.edu</em></p>
+    </header>
+
+    <main>
+      <h2>Proposition: The NYPD Disproportionately Targets Black New Yorkers Compared to Other Racial Groups. </h2>
+
+      <section>
+        <h3>FOR the Proposition</h3>
+
+        <figure>
+          <img src="for.jpeg" alt=""  width="800" />
+          <figcaption>Black New Yorkers file NYPD misconduct complaints at significantly higher rates than White and Asian residents across multiple allegations, showing a strong racial disparity in police encounters.</figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li>Bolded Statistics immediately serve as a hook and highlight the disparities as it is difficult to grasp the data from the bar chart. I acknowledge that the red text and size are visually dramatic and could
+            exaggerate the data by oversimplifying it. However, this was intentional as I wanted to grab the reader's attention as fast as possible and reinforce my point. While I did consider using black/gray text for 
+            a more relaxed tone, I felt that it did not convey my point as strongly as the red. I accepted the tradeoff in subtlety for stronger persuasion. (Score: 0.5)</li>
+
+          <li>Red color on the bar chart emphasizes the higher proportions on black complaints. While this choice might bias the viewer emotionally, I intentionally used it to draw attention by contrasting it from the 
+            other gray bars. This significant color difference would also help viewers quickly determine the sheer scale of difference. I considered using lighter pastel palettes such as the colors from my 
+            graph below, but they presented too many colors and weakened the persuasive impact. In the context of focusing attention and argumentative visualization, I believe red was a good choice despite its potential bias. (Score: 1.5) </li>
+            
+          <li>A strongly worded title frames the viewer perspective from the start. Instead of phrasing my title with neutral words such as "suggests" or "hints", I choose a direct statement of "Point to" to establish a confident
+            and persuasive tone. This was to guide the viewers interpretation and understanding of my point before they even look at the graph. I did consider more passive and suggestive tones, but those titles sounded too passive and 
+            did not fit my argumentative goal. While it may immediately turn my audience skeptical with its declarative nature, I wanted to assert my point clearly. (Score: 1)
+          </li>
+          <li>Citing the data source in the bottom right corner builds trust and credibility. This was included to establish the legitimacy of my data and helps reassure viewers that my rather forward claims are based on real, public records. Even though this small, 
+            just having the dataset increases transparency and can help reduce a little skepticism I built into the visualization. This was something I added in at the end after I realized my argument might have come off too strong
+            and that I would need some credibility. (Score: 2)
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>AGAINST the Proposition</h3>
+
+        <figure>
+          <img src="against.jpeg" alt=""  width="730" >
+          <figcaption>Across major allegation types, complaints are distributed evenly among Black, White, and Hispanic New Yorkers, suggesting that police treatment are more consistent across races than expected.</figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li>making scale bigger. tried to keep all bars similar heights </li>
+          <li>resample</li>
+          <li>cherry pick allegations</li>
+          <li>bright colors to avoid drawing attention to any one bar.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Final Reflection</h2>
+
+        <p>[WRITE FINAL REFLECTION PARAGRAPHS HERE.]</p>
+      </section>
+    </main>
+  </body>
+</html>
